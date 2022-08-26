@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	https://www.springframework.org/schema/beans/spring-beans.xsd"
+ 	xmlns:p="http://www.springframework.org/schema/p"
+ 	xmlns:context="http://www.springframework.org/schema/context" > 
+ 	
+ 	
+ 	<!-- Ex1_Employees -->
+ 	<bean class="P2_CollectionTypes.Ex1_Employees" id="employee1">
+ 		
+ 		<property name="empName" value="Amit Kumar" />
+ 		
+ 		<property name="phones">
+ 			<list>
+ 				<value>9892729983</value>
+ 				<value>7021081661</value>
+ 				<null></null>
+ 			</list>
+ 		</property>
+ 		
+ 		<property name="address">
+ 			<set>
+ 				<value>Mumbai</value>
+ 				<value>Surat</value>
+ 				<value>UP</value>
+ 			</set>
+ 		</property>
+ 		
+ 		<property name="courses">
+ 			<map>
+ 				<entry key="Java" value="3 Months"></entry>
+ 				<entry key="Python" value="5 Months"></entry>
+ 				<entry key="C++" value="1 Months"></entry>
+ 			</map>
+ 		</property>
+ 		
+ 	</bean>
+ 	
+</beans>

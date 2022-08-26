@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	https://www.springframework.org/schema/beans/spring-beans.xsd"
+ 	xmlns:p="http://www.springframework.org/schema/p"
+ 	xmlns:c="http://www.springframework.org/schema/c"
+ 	xmlns:context="http://www.springframework.org/schema/context" > 
+
+	<!-- Ex1_Vehicle -->
+	<bean class="P4_ConstructorInjection.Ex1_Vehicle" id="v1">
+	
+		<constructor-arg value="Red" />
+		<constructor-arg value="Toyota" />	
+
+	</bean> 	
+	
+	
+	<!-- Ex2_Map1 -->
+	<bean class="P4_ConstructorInjection.Ex2_Map1" id="m1">
+	
+		<constructor-arg value="What_is_you_name?" />
+		<constructor-arg value="1" type="int"/>
+		<constructor-arg>
+			<map>
+				<entry key="1" value="Amit Vishwakarma" />
+				<entry key="2" value="Shyamlal Yadav" />
+				<entry key="3" value="Ranjeet Singh" />
+			</map>
+		</constructor-arg>
+	
+	</bean>
+	
+	<!-- Ex3_ConstructorOverload -->
+	<bean class="P4_ConstructorInjection.Ex3_ConstructorOverload" id="c1">
+		
+		<constructor-arg value="10"  index="1" />
+		<constructor-arg value="25"  index="0" />
+				
+	</bean>
+	
+</beans>

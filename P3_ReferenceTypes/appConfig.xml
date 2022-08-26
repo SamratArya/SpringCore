@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	https://www.springframework.org/schema/beans/spring-beans.xsd"
+ 	xmlns:p="http://www.springframework.org/schema/p"
+ 	xmlns:context="http://www.springframework.org/schema/context" > 
+ 	
+ 	<!-- Ex2_Employee_Address -->
+	<bean class="P3_ReferenceTypes.Ex1_EmployeeAddress" id="add1">	
+		
+		<property name="state" value="Maharashtra" />
+		<property name="city" value="Mumbai" />
+		<property name="street" value="Masrani Lane" />
+		<property name="pincode" value="400070" />
+		
+	</bean>
+	
+	<!-- Ex1_Employee -->
+	<bean class="P3_ReferenceTypes.Ex1_Employee" id="add2">
+	
+		<property name="empID" value="1011" />
+		<property name="empName" value="Amit Vishwakarma" />
+		
+		<property name="address">
+			<ref bean="add1" />
+		</property>
+	
+	</bean>
+	
+	<!-- Ex2_PrimeNumberRange -->
+	<bean class="P3_ReferenceTypes.Ex2_PrimeNumberRange" id="ranges">
+		<property name="start" value="1" />
+		<property name="end" value="2" />
+	</bean>
+	
+	<!-- Ex2_PrimeNumberSingle -->
+	<bean class="P3_ReferenceTypes.Ex2_PrimeNumberSingle" id="single">
+		<property name="number" value="1" />
+		<property name="range">
+			<ref bean="ranges"/>
+		</property>
+	</bean>
+	
+</beans>
