@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 	xmlns:context="http://www.springframework.org/schema/context"
+ 	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/util
+		http://www.springframework.org/schema/util/spring-util.xsd"
+ 	xmlns:p="http://www.springframework.org/schema/p"
+ 	xmlns:c="http://www.springframework.org/schema/s">
+ 	
+ 	<!-- For List -->
+ 	<util:list list-class="java.util.LinkedList" id="myList">
+ 		<value>Amit</value>
+ 		<value>Anchal</value>
+ 		<value>Rahul</value>
+ 		<value>Tanveer</value>
+ 	</util:list> 
+ 	
+ 	<!-- For Map -->
+ 	<util:map map-class="java.util.HashMap" id="myMap">
+ 		<entry key="Java" value="25000" />
+ 		<entry key="C++" value="10000" />
+ 		<entry key="SQL" value="5000" />
+ 		<entry key="Ruby" value="21000" />
+ 	</util:map> 
+ 	
+ 	<!-- For Set -->
+ 	<util:set set-class="java.util.TreeSet" id="mySet">
+ 		<value>400070</value>
+ 		<value>400074</value>
+ 		<value>400054</value>
+ 		<value>400032</value>
+ 		<value>400098</value>
+ 	</util:set>
+ 	
+ 	<!-- Ex1_List -->
+ 	<bean class="P7_StandaloneCollections.Ex1_List" name="list1">
+ 		<property name="friends">
+ 			<ref bean="myList" />
+ 		</property>
+ 	</bean> 
+ 	
+ 	<!-- Ex2_Map -->
+ 	<bean class="P7_StandaloneCollections.Ex2_Map" name="map1">
+ 		<property name="courses">
+ 			<ref bean="myMap" />
+ 		</property>
+ 	</bean> 
+ 	
+ 	<!-- Ex3_Set -->
+ 	<bean class="P7_StandaloneCollections.Ex3_Set" name="set1">
+ 		<property name="pincode">
+ 			<ref bean="mySet"/>
+ 		</property>
+ 	</bean>
+ 	
+</beans>

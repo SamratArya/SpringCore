@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd"
+ 	xmlns:p="http://www.springframework.org/schema/p"
+ 	xmlns:c="http://www.springframework.org/schema/c" >
+ 	
+ 	
+ 	<!-- Ex1_UsingXML2 1object-->
+	<!-- <bean class="P6_Autowiring.Ex1_UsingXML2" name="address">
+		<property name="state" value="Maharashtra" />
+		<property name="city" value="Mumbai" />
+	</bean>  -->	 
+	
+	<!-- Ex1_UsingXML2 2object-->
+	<bean class="P6_Autowiring.Ex1_UsingXML2" name="address">
+		<property name="state" value="Punjab" />
+		<property name="city" value="Amritsar" />
+	</bean>  
+	
+	<!-- Ex1_UsingXML1 -->  <!-- By name -->
+	<bean class="P6_Autowiring.Ex1_UsingXML1" name="employee" autowire="byName" >
+		<property name="empName" value="Amit Vishwakarma" />
+	</bean>
+	
+	<!-- Ex1_UsingXML1 -->  <!-- By Type -->
+	<!-- <bean class="P6_Autowiring.Ex1_UsingXML1" name="employee" autowire="byType" >
+		<property name="empName" value="Amit Vishwakarma" />
+	</bean>  -->
+	
+	<!-- Ex1_UsingXML1 -->  <!-- By Constructor -->
+	<!-- <bean class="P6_Autowiring.Ex1_UsingXML1" name="employee" autowire="constructor" >
+		<property name="empName" value="Amit Vishwakarma" />
+	</bean>  -->
+	
+		
+	<!-- Ex2_UsingAnnotation2 -->
+	
+	<context:annotation-config />
+	
+<!-- 	<bean class="P6_Autowiring.Ex2_UsingAnnotations2" name="address">
+		<property name="state" value="Gujrat"/>
+		<property name="city" value="Surat" />
+	</bean> -->
+	
+	<!-- Ex2_UsingAnnotations1 -->
+<!-- 	<bean class="P6_Autowiring.Ex2_UsingAnnotations1" name="main" />
+ -->	
+		
+</beans>	

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd"
+ 	xmlns:p="http://www.springframework.org/schema/p"
+ 	xmlns:c="http://www.springframework.org/schema/c" >
+ 	
+ 	<context:annotation-config></context:annotation-config>
+ 	
+ 	<!-- Ex1_UsingXML -->
+	<!-- <bean class="P5_LifeCycle.Ex1_UsingXML" id="a1" init-method="init" destroy-method="destroy">
+		<property name="name" value="Amit Vishwakarma" />
+		<property name="address" value="Mumbai" />
+	</bean>  -->	
+	
+	<!-- Ex2_UsingInterfaces -->
+	<!-- <bean class="P5_LifeCycle.Ex2_UsingInterfaces" id="a2">
+		<property name="name" value="Pepsi" />
+		<property name="price" value="45" />
+	</bean> -->
+	
+	<!-- Ex3_UsingAnnotations -->
+	<bean class="P5_LifeCycle.Ex3_UsingAnnotations" id="a3">
+		<property name="name" value="Amit Vishwakarma" />
+		<property name="address" value="Mumbai" />
+	</bean>
+</beans>
