@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	https://www.springframework.org/schema/beans/spring-beans.xsd"
+ 	xmlns:p="http://www.springframework.org/schema/p"
+ 	xmlns:context="http://www.springframework.org/schema/context" > 
+ 	
+ 	<!--Ex1_Student  -->
+ 	<bean class="P1_PrimitveTypes.Ex1_Student" id="Student1">
+ 	
+ 		<property name="studentID" value="1011" />
+ 		
+ 		<property name="studentName" value="Amit Vishwakarma" />
+ 		
+ 		<property name="studentAddress" value="Mumbai" />
+ 		
+ 	</bean>
+ 	
+ 	<!--Ex1_Student  -->
+ 	<bean class="P1_PrimitveTypes.Ex1_Student" id="Student2">
+ 	
+ 		<property name="studentID" value="1012" />
+ 		
+ 		<property name="studentName" value="Anchal Vishwakarma" />
+ 		
+ 		<property name="studentAddress" value="UP" />
+ 		
+ 	</bean>
+ 	
+ 	<!-- Ex2_SumOfNUmber -->
+ 	<bean class="P1_PrimitveTypes.Ex2_SumOfTwoNumbers" id="sum">
+ 		<property name="x" value="15" />
+ 		<property name="y" value="45" />
+ 	</bean>
+ 	
+ 	<!-- Ex3_ArmstrongNumber -->
+ 	<bean class="P1_PrimitveTypes.Ex3_ArmstrongNumber" id="arm"> 
+ 		<property name="num" value="10" />
+ 	</bean>
+ 	
+ </beans>
+ 
